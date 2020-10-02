@@ -20,7 +20,7 @@ pipeline {
 		sh 'ls /home/app/web'
 		echo '#############################################'
 		sh 'cd /home/app/web'
-		sh 'ls'
+		sh 'pwd'
 		echo '#############################################'
 
                 sh 'npm run test'
