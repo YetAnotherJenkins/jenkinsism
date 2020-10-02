@@ -3,29 +3,17 @@ pipeline {
 
     environment {
         CI = 'true' 
-	APP_HOME = '/home/app/web'
     }
 
     stages {
-        // stage('Build') {
-        //     steps {
-        //         sh 'npm install'
-        //     }
-        // }
         stage('Test') {
             steps {
-		sh 'pwd'
-		echo '#############################################'
-		sh 'ls'
-		echo '#############################################'
-		sh 'ls /home/app/web'
-		echo '#############################################'
 		sh script:'''
           		#!/bin/bash
 			cd /home/app/web
 			pwd
-			echo '#############################################' 
 			npm run test
+			ls -l
         	'''
             }
         }
