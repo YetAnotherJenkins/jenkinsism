@@ -11,10 +11,9 @@ pipeline {
 		sh script:'''
           		#!/bin/bash
 			cd /home/app/web
-			pwd
-			npm run test
-			echo '####################################################'
 			ls -l
+			echo '####################################################'
+			npm run test
         	'''
             }
         }

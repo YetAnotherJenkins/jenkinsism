@@ -8,4 +8,4 @@ WORKDIR $APP_HOME
 COPY package*.json ./
 RUN npm install
 COPY . . 
-RUN chmod +r .
+RUN chmod -R +w .
