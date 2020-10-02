@@ -13,6 +13,7 @@ pipeline {
 			cd /home/app/web
 			pwd
 			npm run test
+			echo '####################################################'
 			ls -l
         	'''
             }
