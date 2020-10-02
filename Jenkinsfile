@@ -20,6 +20,9 @@ pipeline {
 		sh 'ls /home/app/web'
 		echo '#############################################'
 		sh 'cd /home/app/web'
+		sh 'ls'
+		echo '#############################################'
+
                 sh 'npm run test'
             }
         }
