@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         CI = 'true' 
+	APP_HOME = '/home/app/web'
     }
 
     stages {
