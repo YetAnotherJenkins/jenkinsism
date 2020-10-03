@@ -6,6 +6,7 @@ const URL = "http://hn.algolia.com/api/v1/search";
 function App() {
   const [stories, setStories] = React.useState([]);
   const [error, setError] = React.useState(null);
+  const [shit, setShit] = React.useState(null);
 
   async function handleFetch(event) {
     let result;
