@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         CI = 'true' 
-	JEST_JUNIT_OUTPUT_DIR = '${WORKSPACE}'
+	JEST_JUNIT_OUTPUT_DIR = ${WORKSPACE}
     }
 
     stages {
@@ -15,7 +15,7 @@ pipeline {
 			cd ${APP_HOME}	
 				
 			npm run test | true
-			ls
+			ls -l
         	'''
             }
         }
