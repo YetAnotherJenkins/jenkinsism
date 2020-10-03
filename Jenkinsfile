@@ -13,9 +13,8 @@ pipeline {
           		#!/bin/bash
 
 			cd ${APP_HOME}	
-				
-			npm run test | true
-			ls -l
+
+			npm run test
         	'''
             }
         }
