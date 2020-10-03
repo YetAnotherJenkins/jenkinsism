@@ -14,6 +14,7 @@ pipeline {
 			cd ${APP_HOME}	
 			npm run test | true
 			ls
+			mv junit.xml ${WORKSPACE}
         	'''
             }
         }
