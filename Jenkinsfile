@@ -10,9 +10,9 @@ pipeline {
             steps {
 		sh script:'''
           		#!/bin/bash
-			pwd
+			cd /home/app/web	
 			ls -l
-			echo '####################################################'
+			echo "#######################${APP_HOME}#############################"
 			npm run test
         	'''
             }
