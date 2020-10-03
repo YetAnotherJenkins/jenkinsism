@@ -20,7 +20,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: "${APP_HOME}/node_modules/ajv/package.json", fingerprint: true
+            // archiveArtifacts artifacts: "${APP_HOME}/node_modules/ajv/package.json", fingerprint: true
             junit "${APP_HOME}/junit.xml"
         }
     }
