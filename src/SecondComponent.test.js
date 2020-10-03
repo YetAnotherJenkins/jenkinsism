@@ -44,7 +44,7 @@ describe("App", () => {
       await userEvent.click(screen.getByRole("button"));
     });
 
-    const message = await screen.findByText(/Something went wrongkk/);
+    const message = await screen.findByText(/Something went wrong/);
 
     expect(message).toBeInTheDocument();
   });
