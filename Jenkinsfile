@@ -13,7 +13,6 @@ pipeline {
 
 			cd ${APP_HOME}	
 			npm run test
-			mv junit.xml ${WORKSPACE}
         	'''
             }
         }
@@ -21,8 +20,8 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: 'node_modules/ajv/package.json', fingerprint: true
-            junit 'junit.xml'
+            archiveArtifacts artifacts: "${APP_HOME}/node_modules/ajv/package.json", fingerprint: true
+            junit "${APP_HOME}/junit.xml"
         }
     }
 }
