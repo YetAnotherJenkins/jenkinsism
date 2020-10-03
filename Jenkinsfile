@@ -3,6 +3,7 @@ pipeline {
 
     environment {
         CI = 'true' 
+	JEST_JUNIT_OUTPUT_DIR = '${WORKSPACE}'
     }
 
     stages {
@@ -12,9 +13,9 @@ pipeline {
           		#!/bin/bash
 
 			cd ${APP_HOME}	
+				
 			npm run test | true
 			ls
-			mv junit.xml ${WORKSPACE}
         	'''
             }
         }
