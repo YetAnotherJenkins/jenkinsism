@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         CI = 'true' 
-	JEST_JUNIT_OUTPUT_DIR = ${WORKSPACE}
+	JEST_JUNIT_OUTPUT_DIR = "${WORKSPACE}"
     }
 
     stages {
