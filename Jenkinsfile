@@ -23,7 +23,7 @@ pipeline {
     post {
         always {
             // archiveArtifacts artifacts: "${APP_HOME}/node_modules/ajv/package.json", fingerprint: true
-            junit "/home/app/web/junit.xml"
+            junit 'junit.xml'
         }
     }
 }
